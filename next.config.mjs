@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
-=======
 
 // 1. Define the production status
 const isProd = process.env.NODE_ENV === "production";
@@ -13,6 +8,8 @@ const repo = "sdev_255_final_project_error_404_team_not_found";
 
 const nextConfig = {
   reactStrictMode: true,
+  reactCompiler: true, // Kept from your local config
+
   // 3. Only use the repository name as a path prefix when building for production (GitHub)
   basePath: isProd ? `/${repo}` : "",
   assetPrefix: isProd ? `/${repo}/` : "",
@@ -20,11 +17,10 @@ const nextConfig = {
   // 4. Required for GitHub Pages static export
   output: "export",
 
-  // 5. Disable server-side image optimization (GitHub Pages doesn't support it)
+  // 5. Disable server-side image optimization
   images: {
     unoptimized: true,
   },
->>>>>>> 9a772071db0264fda1118ba935fc074763deee2f
 };
 
 export default nextConfig;
