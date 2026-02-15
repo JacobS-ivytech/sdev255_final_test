@@ -29,7 +29,7 @@ export default function Home() {
           <input
             name="className"
             placeholder="e.g., Mind Reading"
-            className="border border-yellow-400 p-2 rounded text-xl text-black"
+            className="border border-yellow-400 p-2 rounded text-xl text-yellow-400"
             required
           />
 
@@ -39,7 +39,7 @@ export default function Home() {
           <textarea
             name="description"
             placeholder="e.g., Honing the powers of mind reading"
-            className="border border-yellow-400 p-2 rounded text-xl text-black"
+            className="border border-yellow-400 p-2 rounded text-xl text-yellow-400"
             required
           ></textarea>
 
@@ -49,7 +49,7 @@ export default function Home() {
           <input
             name="subject"
             placeholder="e.g., Telepathy"
-            className="border border-yellow-400 p-2 rounded text-xl text-black"
+            className="border border-yellow-400 p-2 rounded text-xl text-yellow-400"
             required
           />
 
@@ -60,7 +60,7 @@ export default function Home() {
             name="creditHours"
             type="number"
             placeholder="3"
-            className="border border-yellow-400 p-2 rounded text-xl text-black"
+            className="border border-yellow-400 p-2 rounded text-xl text-yellow-400"
             required
           />
 
