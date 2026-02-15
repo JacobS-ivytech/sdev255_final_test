@@ -6,13 +6,13 @@ export default function Home() {
   // You can use state to manage the courses once you fetch them
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("Saving course...");
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setStatus("Saving course...");
 
-    // Logic to call your API route would go here
-    // Example: const response = await fetch('/api/courses', { ... });
-  };
+  //   // Logic to call your API route would go here
+  //   // Example: const response = await fetch('/api/courses', { ... });
+  // };
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4 bg-slate-900 text-white">
@@ -22,7 +22,7 @@ export default function Home() {
 
       <h2 className="text-xl mb-4 text-yellow-400">Add a Course</h2>
       <div className="w-full max-w-md">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4">
           <label className="text-sm font-semibold text-yellow-400">
             Course Name:
           </label>
