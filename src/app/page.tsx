@@ -37,7 +37,8 @@ export default function Home() {
         setStatus("Error loading courses")
       }
     }
-)
+  }
+  )
 
   //submit handler
   const handleSubmit = async (e: SubmitEvent) => {
