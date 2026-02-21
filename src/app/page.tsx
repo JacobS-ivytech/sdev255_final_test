@@ -38,8 +38,7 @@ export default function Home() {
       }
     }
     fetchCourses()
-  }
-  )
+  }, [])
 
   //submit handler
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
@@ -145,7 +144,7 @@ export default function Home() {
             <div key={course.courseId} className="border p-4 rounded bg-slate-700">
               <h3 className="font-bold text-yellow-400">{course.className}</h3>
               <p>
-                <span className="font-semibold">Instructor:</span> {course.instructor.name}
+
               </p>
               <p>{course.description}</p>
               <p>

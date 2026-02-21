@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { prisma } from "@/lib/prisma"
+import { supabase } from "@/lib/supabaseClient"
 
 //route for post
 export async function POST(req: Request) {
@@ -19,31 +19,40 @@ export async function POST(req: Request) {
     const instructorId = 1
 
     //create new entry for course
-    const newCourse = await prisma.course.create({
-        data: {
-            className,
-            description,
-            subject,
-            creditHours: Number(creditHours),
-            instructorId: Number(instructorId),
-        },
-    })
+    const { data, error } = await supabase
+        .from("Course")
+        .insert([
+            {
+                className,
+                description,
+                subject,
+                creditHours: Number(creditHours),
+                instructorId: Number(instructorId)
+            },
+        ])
+        .select()
 
-    return NextResponse.json(newCourse, { status: 201 })
+    if (error) {
+        console.error("Insert failed:", error.message)
+        return new Response(
+            JSON.stringify({ error: error.message }), { status: 500 }
+        )
+    }
+
+    return new Response(JSON.stringify(data[0]), { status: 201 })
 }
 
 //route for get
 export async function GET() {
-    try {
-        const courses = await prisma.course.findMany({
-            include: {
-                instructor: true,
-            },
-        })
-        return NextResponse.json(courses)
-    } catch (err) {
-        console.error(err)
-        return NextResponse.json({ error: "Failed to fetch courses" }, { status: 500 })
+
+    const { data, error } = await supabase.from("Course").select("*")
+
+    if (error) {
+        console.error("Supabase connection failed:", error.message)
+        return new Response(JSON.stringify({ connected: false, error: error.message }), { status: 500 })
     }
+
+    return new Response(JSON.stringify(data))
+
 }
 
