@@ -16,7 +16,7 @@ export default function Navbar() {
             href="/courses"
             className="hover:text-yellow-400 font-medium text-2xl transition-colors"
           >
-            Courses
+            Course Management
           </Link>
           <Link
             href="/about"
