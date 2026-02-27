@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -24,12 +20,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/app/generated/prisma/client": [
-        "./src/app/generated/prisma/client"
-      ]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -37,10 +28,14 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/generated/prisma/client",
     ".next/dev/types/**/*.ts"
   ],
+<<<<<<< HEAD
   "exclude": [
     "node_modules"
   ]
 }
+=======
+  "exclude": ["node_modules"]
+}
+>>>>>>> ad87c5b2180255ed1e4540514a28790dfd414a80
