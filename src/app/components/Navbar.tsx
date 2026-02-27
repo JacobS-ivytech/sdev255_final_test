@@ -2,25 +2,25 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black text-white shadow-md flex flex-col items-center">
+    <nav className="fixed top-0 w-full z-50 bg-black text-yellow-400 shadow-md flex flex-col items-center">
       {/* 1. Main Navbar Content */}
       <div className="flex items-center justify-center p-4 w-full font-wolverine">
         <div className="flex gap-10">
           <Link
             href="/"
-            className="hover:text-yellow-400 font-bold transition-colors"
+            className="hover:text-yellow-400 font-medium text-2xl transition-colors"
           >
             Home
           </Link>
           <Link
             href="/courses"
-            className="hover:text-yellow-400 font-bold transition-colors"
+            className="hover:text-yellow-400 font-medium text-2xl transition-colors"
           >
-            Courses
+            Course Management
           </Link>
           <Link
             href="/about"
-            className="hover:text-yellow-400 font-bold transition-colors"
+            className="hover:text-yellow-400 font-medium text-2xl transition-colors"
           >
             About
           </Link>

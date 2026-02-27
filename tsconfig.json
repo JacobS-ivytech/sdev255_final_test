@@ -26,9 +26,6 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ],
-      "@/app/generated/prisma/client": [
-        "./src/app/generated/prisma/client"
       ]
     }
   },
@@ -37,7 +34,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/generated/prisma/client",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

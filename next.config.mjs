@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Add this line to prevent Turbopack from bundling Prisma incorrectly
+  serverExternalPackages: ["@prisma/client"],
 };
 
 export default nextConfig;
